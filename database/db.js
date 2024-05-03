@@ -6,7 +6,7 @@ const db = mongoose.connection
 function connectDB() {
     return new Promise((res, rej) => {
         mongoose
-            .connect(mongoDBURL)
+            .connect(MongoDBUrl)
             .then(() => {
                 console.log("Conexion a la DB establecida correctamente");
                 res();

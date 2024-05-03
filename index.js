@@ -2,14 +2,14 @@ const express = require("express");
 const usersRoutes = require("./routes/usersRoutes");
 const connectDb = require("./database/db");
 const app = express();
-const PORT= 3050;
+const PORT= 3010;
 
 //middleware para parsear
 
 app.use(express.json());
 
-//RUTAS luego nos sirve
-//app.use("/api/users", usersRoutes);
+//RUTAS 
+app.use("/api/users", usersRoutes);
 
 connectDb();
 
