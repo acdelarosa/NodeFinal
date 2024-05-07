@@ -9,7 +9,7 @@ function verifyToken(req, res, next) {
         if (!token) {
             reject({
                 status: 401,
-                message: "Token de autenticación no proporcionada",
+                message: "Token de autenticación no proporcionad",
             });
         }
         jwt.verify(

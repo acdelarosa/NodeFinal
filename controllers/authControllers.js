@@ -1,7 +1,7 @@
 const authService = require("../services/authServices");
-const AuthToken = require("../Models/Users");
-const bcryptService = require("../services/bcryptService");
-const User = require("../models/User");
+const User = require("../Models/users");
+const AuthToken = require("../Models/users");
+
 
 function login(req, res) {
     const { email, contraseña } = req.body;
@@ -31,16 +31,14 @@ function logout(req, res) {
     .then(()=>{
       res.status(200).json({message: "Sesión cerrada exitosamente" , error: {token}})
     })
-    /* .catch((error)=>{
+     .catch((error)=>{
       console.error(error)
       res.status(500).json({message: "Error al iniciar sesion"})
-    }) */
+    }) 
   }
-  
-
-
+ 
 
   module.exports = {
     login,
-    logout,
+    logout
   };

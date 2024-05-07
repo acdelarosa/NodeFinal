@@ -1,7 +1,5 @@
-const User = require("../models/User");
-
-
-
+const User = require("../Models/users");
+//funcion 
 function getCurrentUser(req, res) {
     new Promise((resolve, reject) => {
         const userId = req.userId;
@@ -22,6 +20,4 @@ function getCurrentUser(req, res) {
         });
 }
 
-module.exports = {
-    getCurrentUser,
-};
+module.exports = {getCurrentUser};
