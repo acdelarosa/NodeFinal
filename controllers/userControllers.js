@@ -1,4 +1,5 @@
 const User = require("../Models/users");
+const bcryptService = require("../services/bcryptservice");
 
 //Para obtener todos los usuarios
 
