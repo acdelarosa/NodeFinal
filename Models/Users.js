@@ -8,12 +8,12 @@ const userSchema = new mongoose.Schema({
     },
     edad: {
       type: Number,
-      required: true,
+      required: true
     },
     email: {
       type: String,
       required: true,
-      unique: true, //El correo electronico tiene que ser único
+      unique: true //El correo electronico tiene que ser único
     },
     contraseña: {
       type: String,
